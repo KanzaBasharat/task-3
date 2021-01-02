@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+     .row
+        .col-sm-8
+            h2#g Products in KB
+        .col-sm-4
+            a(href="/branchs/add", class="btn btn-success float-right" , id="i") Add New Branch    
+        table.table
+            thead#j
+                tr
+                    th Name
+                    th Location
+                    th Actions
+            tbody
+                each product in products
+                    tr#k
+                        td=product.name
+                        td=product.location
+                        td
+                            a(href="/branchs/delete/"+product._id, class="btn btn-danger", id="l") Delete

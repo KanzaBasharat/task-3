@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+    h3#w Add New Branch
+        form(action="/branchs/add",method="post",, id="x")
+            .form-group
+                label(for="name") Branch Name
+                input#name(type="text",class="form-control", name="name")
+            .form-group
+                label(for="location") Branch Location
+                input#location(type="text",class="form-control", name="location")
+            input(type="submit", class="btn btn-info" ,id="y")

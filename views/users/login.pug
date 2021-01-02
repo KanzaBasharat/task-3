@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h3#w LOGIN
+        form(action="/login",method="post" , id="x")
+            .form-group
+                label(for="email") Email
+                input#email(type="text",class="form-control", name="email" )
+            .form-group
+                label(for="password") Password
+                input#password(type="password",class="form-control", name="password")
+            input(type="submit", class="btn btn-info", value="Login",id="y")
